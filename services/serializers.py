@@ -62,3 +62,7 @@ class TypeOfServiceCreateSerializer(serializers.ModelSerializer):
 
 class DetailCompanySerializer(CompanySerializer):
     type_of_services = TypeOfServiceSerializer(many=True)
+
+    class Meta:
+        model = Company
+        fields = '__all__'
